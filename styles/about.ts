@@ -3,40 +3,106 @@ import styled from "styled-components";
 
 export const AboutContainer = styled.div`
 
-    display: flex;
-    margin-right: 64px;
-    margin-left: 64px;
-    gap: 1rem;
-    height: 85vh;
-    align-items: center;
-
-
-    div.technologies-used{
-        background-color: #0F0F0F;
-        padding: 1.5rem;
-        width: 800px;
-        height: 268px;
-
+   div.introduction{
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50vh;
+        color: #fff;
         
 
         h1{
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 1.5rem;
+            z-index: 1;
+            margin: auto;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 50px;
+            padding: 0rem 1rem 0rem 1rem;
+        }
+        
+        h3{
+            z-index: 1;
+            padding: 0;
+            margin: auto;
+            margin-top: 0;
+            color: #bbb;
+            font-weight: 500;
+
         }
 
-        section {
+       img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            filter: brightness(30%);
+       }
+   }
+
+   section.container-card{
+    
+    margin-bottom: 20px;
+    height: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0rem 2rem  0rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+    div.card{
+        width: 300px;
+        height: 420px;
+        margin: 10px;
+        background-color: #0E0E0E;
+        margin-top: -14%;
+        z-index: 1;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 50.0488px 40.0391px rgba(0, 0, 0, 0.0532233), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 19.3198px 15.4559px rgba(0, 0, 0, 0.0399626), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 7.88218px 6.30574px rgba(0, 0, 0, 0.0300374), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888), 0px 1.99324px 1.59459px rgba(0, 0, 0, 0.0167767);
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+
+        
+        &:hover > img{
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover{
+            box-shadow: 0px 100px 80px rgba(229, 11, 20, 0.07), 0px 50.0488px 40.0391px rgba(229, 11, 20, 0.0532233), 0px 30.1471px 24.1177px rgba(229, 11, 20, 0.0456112), 0px 19.3198px 15.4559px rgba(229, 11, 20, 0.0399626), 0px 12.5216px 10.0172px rgba(229, 11, 20, 0.035), 0px 7.88218px 6.30574px rgba(229, 11, 20, 0.0300374), 0px 4.5288px 3.62304px rgba(229, 11, 20, 0.0243888), 0px 1.99324px 1.59459px rgba(229, 11, 20, 0.0167767);
+            transition: all .3s ease-in-out;
+            transform: translateY(-5%);
+        }
+      
+
+        section{
             display: flex;
             flex-direction: column;
+
+
             span{
                 position: relative;
-                color: #9C9C9C;
-                font-weight: bold;
-                display: inline-block;
-                margin-bottom: 8px;
-                margin-left: 15px;
+                margin-left: 0rem;
+                color: #ABABAB;
+                padding: 0px 16px 0px 16px;
+                z-index: 2;
+                letter-spacing: 0.6px;
+            }
 
-                &::before{
+        
+        }
+
+        .container-itens{
+
+                span{
+                    margin-left: 2.4rem;
+                    padding: 2px;
+                }
+
+                & span::before{
                     content: "";
                     position: absolute;
                     left: -15px;
@@ -48,127 +114,200 @@ export const AboutContainer = styled.div`
                     background-color: #E50B14;
                 }
             }
+
+        h2{
+            margin-left: 1rem;
+            color: #fff;
+            margin-bottom: 8px;
+
+        }
+
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            z-index: 2;
+            margin-left: 0%;
+            transition: all .2s ease-in-out;
+
+
+
+        }
+    }
+   }
+
+
+   div.line{
+       width: 96%;
+       height: 2px;
+       background-color: #3F3F3F;
+       margin: 10px auto 0px auto;
+    }
+
+    div.text-end{
+        color: #ABABAB;
+        width: 80% auto;
+        font-weight: bold;
+        text-align: center;
+        padding: 40px;
+
+
+        span a{
+            color: #E50B14;
         }
     }
 
-    div.project-curiosities{
+    @media(max-width:1090px){
+    
+        section.container-card{
+    
         
-        background-color: #E7E7E7;
-        height: 268px;
-        padding: 1rem;
-        box-shadow:  0px 100px 80px rgba(0, 0, 0, 0.07), 0px 50.0488px 40.0391px rgba(0, 0, 0, 0.0532233), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 19.3198px 15.4559px rgba(0, 0, 0, 0.0399626), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 7.88218px 6.30574px rgba(0, 0, 0, 0.0300374), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888), 0px 1.99324px 1.59459px rgba(0, 0, 0, 0.0167767);
+        margin-bottom: 20px;
+        width: 90%;
+        height: 840px;
 
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            h1{
-                color: #151515;
-                font-size: 24px;
-                padding-right: 0.5rem;
-
-            }
-            
-
-            section{
-                display: flex;
-                gap: 0.5rem;
-
-                img{
-                    cursor: pointer;
-                    transition: all.4s;
+        margin: 0 auto;
+        padding: 0rem 2rem  0rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
 
 
-                    &:hover{
-                        transform: translateY(-15%);
-                        transition: all .3s;
-                    }
-                }
+        div#card3{
+            margin-top: 10px;
+
+            span{
+                 a{
+                        text-decoration: underline ;
+                 }
             }
 
         }
-
-        span{
-            color: #585858;
-            font-size: 18px;
-
-            a{
-                color:#436FB0;
-            }
-        } 
     }
-
-    @media(max-width: 1270px){
-        display: flex;
-        flex-direction: column;
+}
 
 
-        div.technologies-used{
-        width: 100%;
-        height: 268px;
-        box-shadow: 0px 0px 0px transparent;
-        margin-bottom: 2rem;
-        margin-top: 4rem;
+@media(max-width:790px){
 
+
+    section.container-card{
+
+        grid-template-columns: 1fr;
+        height: 1330px;
+
+        #card1{
+            margin-top: -7%;
         }
-    }
 
-    @media(max-width: 628px){
-    
-        div.technologies-used{
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-
-        }
-    
-        div.project-curiosities{
-            height: 368px;
+        div#card2{
+            margin-top: 5px;
         }
 
 
-    }
-
-    @media(max-width: 540px){
-        margin-right: 32px;
-        margin-left: 32px;
-    }
-
-    @media(max-width: 450px){
-
-
-        div.technologies-used{
-
-            section span{
-                    font-size: 12px;
-            }
+        h2{
+            font-size: 20px;
         }
 
-    div.project-curiosities{
-    
-
-
-        header {
-            padding-bottom: 1rem;
-            section{
-            display: flex;
-            flex-direction: column;
-            
-
-            img{
-                width: 45px;
-            }
-        }
-    }
-        
-
-        span{
-            margin-top: 20px;
+        section span{
             font-size: 12px;
+            
+        }
+        
         }
     }
 
+@media(max-width:500px){
+
+    div.introduction{
+        height: 60vh;
+        color: #fff;
+        
+
+        h1{
+            font-size: 45px;
+        }
+        
+        h3{
+            font-size: 16px;
+
+        }
+
+       img{
+            height: 60vh;
+            filter: brightness(25%);
+       }
+   }
+
+    section.container-card{
+
+        div.card{
+            width: 250px;
+            height: 380px;
+        }
     }
+}
+
+@media(max-width:500px){
+
+    div.introduction{
+        height: 60vh;
+        color: #fff;
+        
+
+        h1{
+            font-size: 30px;
+        }
+        
+        h3{
+            font-size: 14px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+}
+
+    div.text-end{
+        text-align: left;
+    }
+}
+
+@media(max-width:394px){
+    section.container-card{
+
+        #card1{
+            margin-top: -30%;
+        }
+        
+        div.card{
+            width: 250px;
+            height: 380px;
+
+            h2{
+                margin-top: 10px;
+                margin-left: 16px;
+                margin-right: 10px; 
+            }
+        }
+    }
+
+}
+
+@media(max-width:326px){
+
+    section.container-card{
+        width: 100%;
+
+        #card1{
+            margin-top: -14%;
+        }
+
+        div.card{
+            width: 220px;
+            height: 380px;
+        }
+    }
+}
 
 
 

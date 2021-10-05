@@ -9,13 +9,12 @@ export const ContainerHome = styled.div`
         align-items: center;
         justify-content: center;
 
-
         @media(max-width: 970px){
                 margin-top: 6rem;
                 gap: 3rem;
                 padding: 0 16px;
                 flex-direction: column;
-                height: 90vh;
+                height: 60vh;
 
         }
 

@@ -10,87 +10,103 @@ export const Item = styled.section`
             overflow: hidden;
             cursor: pointer;
             margin: 10px;
-            background-color: #151515;
+            background-color: #000;
             display: flex;
-            justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: center;
             transition: all .2s ease;
-
-
-            &::before{
-                content: "";
-                position: absolute;
-                top: -50%;
-                width: 100%;
-                height: 100%;
-                background-color: #B8B8B8;
-                transform: skewY(345deg);
-                transition: .5s;
-            }
-
-            &:hover::before{
-                top: -70%;
-                transform: skewY(390deg);
-                background-color: #fff;
-
-
-            }
+            border-radius: 20px 0px 20px 0px;
 
             &:hover{
-                background: #e62429;
-                transition: all .4s ease-in;
+            border-radius: 0px 15px 0px 15px;
+
             }
+
 
             &:hover > img{
                 transform: scale(1.1);
-                transition: all .2s;
+                transition: all .4s ease-in-out;
+                opacity: 1;
+
+            }
+
+            &:hover > div span{
+                transition: all .2s ease-in-out;
+                color: #fff;
+            }
+
+            div::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                height: 5px;
+                width: 100%;
+                background-color: #e62429;
+                transition: all .3s ease-in;
+            }
+
+            &:hover > div::before{
+                height: 100%;
+                transition: all .3s ease-in-out;
             }
 
         
             img{
-                width: 170px;
-                height: 170px;
+                width: 100%;
                 object-fit: cover;
-                background-color: #111111;
-                padding: 10px;
-                border-radius: 20px;
-                z-index: 1;
+                opacity: 0.7;
+                z-index: 0;
                 transition: all .5s;
-                box-shadow:  0px 100px 80px rgba(0, 0, 0, 0.07), 0px 50.0488px 40.0391px rgba(0, 0, 0, 0.0532233), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 19.3198px 15.4559px rgba(0, 0, 0, 0.0399626), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 7.88218px 6.30574px rgba(0, 0, 0, 0.0300374), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888), 0px 1.99324px 1.59459px rgba(0, 0, 0, 0.0167767);
             }
 
-            span{
+            div{
                 position: relative;
-                margin-top: 2rem;
+                padding: 10px;
+                display: flex;
+                background-color: #EFEFEF;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+
+            span{
                 transition: all .2s ease-in;
-                font-weight: bold;
-                color: #fff;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 0.6px;
+                font-weight: 900;
+                color: #151515;
                 font-size: 19px;
+                z-index: 2;
             }
+        }
 
 
             @media(max-width: 510px){
                 width: 270px;
                 height: 350px;
+                border-radius: 0px;
 
-                img{
-                    height: 120px;
-                    width: 120px;
-                }
+                &:hover > div span{
+                transition: all .08s ease-in-out;
+                color: #fff;
             }
+
+                &:hover > div::before{
+                height: 100%;
+                transition: all .1s ease-in-out;
+            }
+
+
 
             @media(max-width: 400px){
                 width: 170px;
                 height: 300px;
 
-                img{
-                    height: 100px;
-                    width: 100px;
-                }
 
-                span{
+        
+              div span{
                     font-size: 14px;
                 }
             }
@@ -99,12 +115,8 @@ export const Item = styled.section`
                 width: 170px;
                 height: 250px;
 
-                img{
-                    height: 120px;
-                    width: 120px;
-                }
 
-                span{
+               div span{
                     font-size: 14px;
                 }
             }
@@ -114,15 +126,12 @@ export const Item = styled.section`
                 height: 200px;
                 padding: 1rem;
 
-                img{
-                    height: 100px;
-                    width: 100px;
-                }
 
-                span{
+
+               div span{
                     font-size: 14px;
                 }
             }
-
+        }
 
 `

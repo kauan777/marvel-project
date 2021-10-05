@@ -2,18 +2,20 @@ import styled from "styled-components";
 
 
 export const Header = styled.header`
-
+        position: relative;
+        z-index: 100;
         width: 100%;
-        padding: 0 64px;
-        padding-top: 20px;
+        padding: 10px 64px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-shadow:  0px 0px 15px #0E0E0E;
     
 
     nav{
         display: flex;
         align-items: center;
+
 
     svg{
         display: none;
@@ -54,6 +56,7 @@ export const Header = styled.header`
         }
 
         ul{
+            position: relative;
             display: flex;
             list-style: none;
             color: #C4C4C4;
@@ -64,6 +67,11 @@ export const Header = styled.header`
                 padding: 5px;
                 transition: .2s;
                 font-weight: 600;
+
+                a{
+                    position: relative;
+                    display: inline-block;
+                }
 
             }
 
@@ -94,10 +102,10 @@ export const Header = styled.header`
 
     @media(max-width: 970px){
 
-        padding: 0 32px;
-        padding-top: 32px;
+        padding: 16px 32px 16px 32px;
 
         nav{
+
             section{
 
             display: flex;
@@ -121,7 +129,6 @@ export const Header = styled.header`
                 display: none;
                 opacity: 0;
                 transition: 1s;
-
             }
 
             svg#open{
@@ -143,7 +150,7 @@ export const Header = styled.header`
                 visibility: visible;
                 height: 100vh;
                 width: 100vw;
-                z-index: 2;
+                z-index: 100;
                 background: #151515;
                 position: fixed;
                 text-align: center;
@@ -160,6 +167,10 @@ export const Header = styled.header`
                 transition: 1s;
                 margin: 0;
                 padding: 0;
+
+                li::before{
+                    transition: width .1s;
+                }
             }
 
                 svg#open{

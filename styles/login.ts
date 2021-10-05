@@ -16,6 +16,7 @@ export const PageLogin = styled.section`
         img{
             width: 100%;
             object-fit: cover;
+            filter: brightness(30%);
         }
 
     }
@@ -27,16 +28,17 @@ export const PageLogin = styled.section`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+        background-color: #0C0C0C;
+
         .main-content {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        flex: 5;
-        max-width: 320px;
-        align-items: center; //Eesticar
-        place-content: center;
-        text-align: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex: 5;
+            max-width: 320px;
+            align-items: center; //Eesticar
+            place-content: center;
+            text-align: center;
 
         img#logo{
             width: 210px;
@@ -99,13 +101,13 @@ export const PageLogin = styled.section`
 
             .main-content {
 
-                    img#logo{
-                width: 190px;
-                        }
+                img#logo{
+                    width: 190px;
+                }
 
-                    span{
-                        font-size: 1rem;
-                    }
+                span{
+                    font-size: 1rem;
+                }
 
             }
         }

@@ -34,11 +34,11 @@ const Profile: React.FC = () => {
 
   return (
     <ProfileStyle>
-    <div className="image">
-        <img src={user?.avatar} />
-    </div>
-    <span>{user?.name}</span>
-</ProfileStyle>
+        <div className="image">
+            <img src={user?.avatar} />
+        </div>
+        <span>{user?.name}</span>
+    </ProfileStyle>
   );
 }
 
