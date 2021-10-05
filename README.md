@@ -5,17 +5,35 @@ Open [http://localhost:3000](Marvel Project) with your browser to see the result
 
 
 
-## Learn More
+## Tecnologias usadas
 
-To learn more about Next.js, take a look at the following resources:
+Cada tecnologia foi escolhida por uma causa especifica:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NextJS
+- TypeScript
+- DatoCMS
+- Firebase
+- Styled-components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Por que NextJS?
 
-## Deploy on Vercel
+NextJS porque é um framework que tem uma facilidade de trabalhar com páginas dinâmicas e estaticas, deixando assim a aplicação bem mais performática.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Por que TypeScript?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Como foi usado chamadas API no projeto, nada melhor que ter um controle de quais dados estão vindo com a tipagem.
+
+## Por que DatoCMS?
+
+Diferente de uma requisição de uma API comum, usando o DATOCMS eu consigo chamar somente os valores necessários além de poder ser gerenciado por uma pessoa que não sabe progamar.
+
+## Por que Firebase?
+
+O Firebase tem uma documentação ótima de como usar seus serviços. Nesse projeto foi usado a auteticação com o Google.
+
+## Por que Styled-components?
+
+Styled-components foi usado porque é uma sintaxe visualmente simples e que pode ser usada um único estilo em diversos componentes. 
+
+
+Obrigado por ler!
