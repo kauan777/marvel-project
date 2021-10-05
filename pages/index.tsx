@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <PageLogin>
       <aside>
-        <img src="https://www.enwallpaper.com/wp-content/uploads/marvels-spider-man-miles-morales-2020-ps5-oy-scaled.jpg"/>
+        <img src="https://www.enwallpaper.com/wp-content/uploads/marvels-spider-man-miles-morales-2020-ps5-oy-scaled.jpg" alt="Background"/>
       </aside>
 
       <main>

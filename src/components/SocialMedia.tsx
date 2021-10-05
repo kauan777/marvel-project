@@ -119,9 +119,9 @@ interface SocialType extends React.HTMLAttributes<HTMLDivElement>{
 
 export default function SocialMedia({icon, name, link}:SocialType){
   return (
-    <a href={`${link}`} target="_blank">
+    <a rel="noreferrer" href={`${link}`} target="_blank">
         <SocialMediaStyled >
-            <img src={icon}/>
+            <img src={icon} alt="Icon"/>
             <span>{name}</span>
         </SocialMediaStyled>
     </a>    

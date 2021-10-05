@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../hooks/useAuth';
 import styled from 'styled-components';
+import Image from 'next/image'
 
 export const ProfileStyle = styled.section`
 
@@ -32,10 +33,11 @@ const Profile: React.FC = () => {
 
     const { user } = useAuth()
 
+
   return (
     <ProfileStyle>
         <div className="image">
-            <img src={user?.avatar} />
+            <img src={`${user?.avatar}`} alt="Avatar"/>
         </div>
         <span>{user?.name}</span>
     </ProfileStyle>

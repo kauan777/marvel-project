@@ -19,7 +19,6 @@ const Herois: React.FC = ({ heros }: any) => {
 
 
 
-  const [heroes, setHeroes] = useState([])
   const [loading, setLoading] = useState(true)
 
 
@@ -61,9 +60,9 @@ const Herois: React.FC = ({ heros }: any) => {
   console.log(loading)
 
   const breakPoints = [
-    { width: 400, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 800, itemsToShow: 3 },
+    { width: 400,  itemsToShow: 1 },
+    { width: 550,  itemsToShow: 2 },
+    { width: 800,  itemsToShow: 3 },
     { width: 1090, itemsToShow: 4 },
   ];
 
@@ -81,7 +80,7 @@ const Herois: React.FC = ({ heros }: any) => {
           {loading ? <LoadingCard key={Math.random()} /> :
             heros.map((hero: HeroType) => {
               return (
-                <a href={`characters/${hero.slug}`} key={hero.id}>
+                <a href={`/characters/${hero.slug}`} key={hero.id}>
                   <Item >
                     <img src={hero.imgcard} alt="Imagem de fundo do Card" />
                     <div>

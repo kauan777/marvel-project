@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
 import React from 'react';
 import NavBar from '../../src/components/Navbar';
 import { ContainerHeroi } from '../../styles/slug';
@@ -35,8 +34,8 @@ function Heroi({heroiDato}: CompHeroi){
                   <h1>{heroiDato.title}</h1>
                   <span>{heroiDato.description}</span>
               </div>
-              <img id="hero"src={heroiDato.imghero} alt="nada" />
-              <img id="background"src={heroiDato.background}/>
+              <img id="hero"src={heroiDato.imghero} alt="Imagem do herois" />
+              <img id="background"src={heroiDato.background} alt="Background do herói"/>
         </ContainerHeroi>
         </>
     )
