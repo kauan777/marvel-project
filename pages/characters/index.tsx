@@ -76,7 +76,7 @@ const Herois: React.FC = ({ heros }: any) => {
             }
     `}</style>
         <h1>HEROIS DA MARVEL</h1>
-        <Carousel breakPoints={breakPoints} >
+        <Carousel isRTL breakPoints={breakPoints} >
           {loading ? <LoadingCard key={Math.random()} /> :
             heros.map((hero: HeroType) => {
               return (
