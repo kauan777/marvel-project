@@ -7,8 +7,6 @@ Open [http://localhost:3000](Marvel Project) with your browser to see the result
 
 ## Tecnologias usadas
 
-Cada tecnologia foi escolhida por uma causa especifica:
-
 - NextJS
 - TypeScript
 - DatoCMS
