@@ -9,28 +9,28 @@ export const Item = styled.section`
             height: 350px;
             overflow: hidden;
             cursor: pointer;
+            align-items: stretch;
             margin: 10px;
             background-color: #000;
             display: flex;
-            align-items: center;
             flex-direction: column;
             transition: all .2s ease;
             border-radius: 20px 0px 20px 0px;
 
             &:hover{
-            border-radius: 0px 15px 0px 15px;
+            border-radius: 0px 0px 0px 0px;
 
             }
 
 
-            &:hover > img{
+            &:hover > .imgfundo{
                 transform: scale(1.1);
                 transition: all .4s ease-in-out;
                 opacity: 1;
 
             }
 
-            &:hover > div span{
+            &:hover > div.span span{
                 transition: all .2s ease-in-out;
                 color: #fff;
             }
@@ -50,24 +50,28 @@ export const Item = styled.section`
                 transition: all .3s ease-in-out;
             }
 
-        
+        div.img-card{
+            width: 250px;
+            height: 270px;
+            padding: 0;
+            margin: 0;
             img{
-                width: 100%;
+                width: 250px;
+                height: 270px;
                 object-fit: cover;
-                opacity: 0.7;
-                z-index: 0;
+                z-index: 2;
                 transition: all .5s;
             }
+        }
 
-            div{
+            div.span{
                 position: relative;
-                padding: 10px;
+                padding: 20px;
                 display: flex;
+                flex: 1;
                 background-color: #EFEFEF;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
-                height: 100%;
                 z-index: 2;
 
             span{
@@ -88,6 +92,21 @@ export const Item = styled.section`
                 height: 350px;
                 border-radius: 0px;
 
+
+                div.img-card{
+                    width: 270px;
+                    height: 280px;
+                    padding: 0;
+                    margin: 0;
+                    img{
+                        width: 270px;
+                        height: 280px;
+                        object-fit: cover;
+                        z-index: 2;
+                        transition: all .5s;
+                    }
+                }
+
                 &:hover > div span{
                 transition: all .08s ease-in-out;
                 color: #fff;
@@ -102,18 +121,16 @@ export const Item = styled.section`
 
             @media(max-width: 400px){
                 width: 170px;
-                height: 300px;
-
-
-        
-              div span{
-                    font-size: 14px;
-                }
-            }
-
-            @media(max-width: 400px){
-                width: 170px;
                 height: 250px;
+
+                div.img-card{
+                    width: 170px;
+                    height: 190px;
+                    img{
+                        width: 170px;
+                        height: 190px;
+                    }
+                }
 
 
                div span{
@@ -125,6 +142,15 @@ export const Item = styled.section`
                 width: 170px;
                 height: 200px;
                 padding: 1rem;
+
+                div.img-card{
+                    width: 120px;
+                    height: 120px;
+                    img{
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
 
 
 

@@ -6,6 +6,8 @@ import Carousel from "react-elastic-carousel";
 import LoadingCard from '../../src/components/Loading/LoadingCard';
 import withAuth from '../../utils/withAuth';
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
+import Image from 'next/image'
 
 
 const Herois: React.FC = ({ heros }: any) => {
@@ -76,18 +78,22 @@ const Herois: React.FC = ({ heros }: any) => {
             }
     `}</style>
         <h1>HEROIS DA MARVEL</h1>
-        <Carousel isRTL breakPoints={breakPoints} >
+        <Carousel isRTL={false} breakPoints={breakPoints} >
           {loading ? <LoadingCard key={Math.random()} /> :
             heros.map((hero: HeroType) => {
               return (
-                <a href={`/characters/${hero.slug}`} key={hero.id}>
+                <Link href={`/characters/${hero.slug}`} key={hero.id}>
+                  <a>
                   <Item >
-                    <img src={hero.imgcard} alt="Imagem de fundo do Card" />
-                    <div>
+                    <div className="img-card">
+                    <Image width={600} height={800} className="imgfundo" src={hero.imgcard} alt="Imagem de fundo do Card" />
+                    </div>
+                    <div className="span">
                       <span>{hero.title} </span>
                     </div>
                   </Item>
                 </a>
+                </Link>
               )
             })}
         </Carousel>
