@@ -70,7 +70,7 @@ export const getStaticPaths: GetStaticPaths = async () =>{
     const heroesInJson = await response.json()
     const allHeroes = heroesInJson.data.allHeros
 
-    const paths = allHeroes.map((item: any) => { 
+    const paths = allHeroes.map((item: HeroiType) => { 
         return { params: { slug: item.slug}}
     })
 
