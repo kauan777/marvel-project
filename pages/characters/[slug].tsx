@@ -77,7 +77,7 @@ export const getStaticPaths: GetStaticPaths = async () =>{
 
     return {
         paths,
-        fallback: false // true significa que vai ser dinamico somente no momento que for acessado, isso acontece quando eu entro com um novo item na api,dato e etc
+        fallback: 'blocking' // true significa que vai ser dinamico somente no momento que for acessado, isso acontece quando eu entro com um novo item na api,dato e etc
     }
 }
 
